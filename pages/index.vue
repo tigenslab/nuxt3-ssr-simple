@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Home Page</h1>
-    <p>This page is rendered using Nuxt 3 SSR.</p>
+    <h1>Nuxt 4 SSR Home</h1>
+    <p>Rendered on the server.</p>
   </div>
 </template>

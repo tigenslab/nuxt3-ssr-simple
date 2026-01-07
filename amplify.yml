@@ -3,8 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm install 20.19.6
-        - nvm use 20.19.6
+        - nvm install 24.0.0
+        - nvm use 24.0.0
+        - node -v
+        - npm -v
         - rm -rf node_modules
         - npm ci
     build:
@@ -15,4 +17,4 @@ frontend:
     files:
       - '**/*'
   cache:
-    paths: []   # 🚨 DISABLE CACHE (important)
+    paths: []  # Disable cache to avoid native binding issues
