@@ -4,11 +4,19 @@ frontend:
     preBuild:
       commands:
         - nvm install 24.0.0
-        - nvm use 24.0.0
+        - nvm use  24.0.0
         - node -v
         - npm -v
         - rm -rf node_modules
-        - npm ci
+
+        # Enable Corepack and activate pnpm
+        - corepack enable
+        - corepack prepare pnpm@latest --activate
+        - pnpm config set store-dir .pnpm-store
+        - pnpm -v
+        # Install sqlite3 explicitly for Nuxt Content
+        - pnpm add sqlite3
+     
     build:
       commands:
         - npm run build
