@@ -6,5 +6,7 @@ export default defineNuxtConfig({
     head: {
       title: 'Nuxt 4 SSR App'
     }
-  }
+  },
+   modules: ['@nuxt/ui'],
+    css: ['~/assets/css/main.css']
 })

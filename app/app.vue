@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <UApp>
     <nav>
       <NuxtLink to="/">Home</NuxtLink> |
       <NuxtLink to="/about">About</NuxtLink>
     </nav>
+
     <NuxtPage />
-  </div>
+ </UApp>
 </template>
